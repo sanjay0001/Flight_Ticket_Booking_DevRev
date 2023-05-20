@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel = "icon" href = "https://cdn-icons-png.flaticon.com/512/3125/3125713.png" type = "image/x-icon">
+    {% load static %} 
+    <link href="{% static 'main.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" crossorigin="anonymous"></script>
+    
+</head>
+<body>
+
+    <nav class="navbar navbar-dark bg-primary">
+      <a class="navbar-brand" href="profile">
+        <img src="https://cdn-icons-png.flaticon.com/512/3125/3125713.png" width="30" height="30" class="d-inline-block align-top" alt="">
+        AirDev
+        </a>
+        <div style="float: right;">
+            <a style="color: white; margin:0 25px 0 0" href="/buyticket">Buy Tickets</a>
+            <a style="color: white;" href="/logout" >Logout</a>
+        </div>
+    </nav>
+    
+    <div class="container rounded bg-white mt-5" >
+      {% if flights %}
+      <h2 style="text-align:center">My Booking</h2>
+      {% else %}  <h2 style="text-align:center">Sorry! You have no tickets</h2> {% endif %}
+      {% for flight in flights %}
+        <div class="card" >
+          <div class="card-body">
+            <h5 class="card-title">{{ flight.flight_name }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Flight Info</h6>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Flight No. : <b>{{ flight.flight_number }}</b>  </li>
+              <li class="list-group-item">From : {{ flight.flight_from }}</li>
+              <li class="list-group-item">To : {{ flight.flight_to }} </li>
+              <li class="list-group-item">Departure Date : {{ flight.takeoff_date }} </li>
+              <li class="list-group-item">Departure Time : {{ flight.takeoff_time }} </li>
+              <li class="list-group-item">Arrival Date : {{ flight.arrival_date }} </li>
+              <li class="list-group-item">Arrival Time :  {{ flight.arrival_time }} </li>
+              <li class="list-group-item">Flight Duration : {{ flight.flight_duration }} hrs</li>
+              <li class="list-group-item">Ticket Price : Rs.{{ flight.price }}</li>
+            </ul>
+          </div>
+        </div>
+        <hr>
+      {% endfor %}
+       
+    </div>
+
+
+</body>
+</html>
