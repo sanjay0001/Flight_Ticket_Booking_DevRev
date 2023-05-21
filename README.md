@@ -10,8 +10,8 @@ Database : Sqlite3 <br>
 ### About the project:
 It is an online flight ticket booking web application. <br>
 This application contains two modules <br>
-            * User<br>
-            * Admin<br>
+            &emsp;* User<br>
+            &emsp;* Admin<br>
             
 #### User modules:
   * **Register** - User can register by giving all the neccessary details and need to verify ##### Email before login.
@@ -30,9 +30,9 @@ This application contains two modules <br>
 Django uses ORM(Object Relational Mapping) so all the models(objects) are created in Django itself.<br>
 There are totally 3 tables User, Flights and Flight_Book<br>
 User table has columns as <br>
-           id<br>
-           name<br>
-           age<br>
+           &emsp;id<br>
+           &emsp;name<br>
+           &emsp;age<br>
            contactno<br>
            email<br>
            password<br>
