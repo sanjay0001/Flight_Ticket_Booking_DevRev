@@ -33,25 +33,25 @@ User table has columns as <br>
            &emsp;id<br>
            &emsp;name<br>
            &emsp;age<br>
-           contactno<br>
-           email<br>
-           password<br>
-           token - for **authentication** by setting **cache** in client browser<br>
-           is verified - for email verification status<br>
+           &emsp;contactno<br>
+           &emsp;email<br>
+           &emsp;password<br>
+           &emsp;token - for **authentication** by setting **cache** in client browser<br>
+           &emsp;is verified - for email verification status<br>
 Flights table has columns as<br>
-           flight _ number<br>
-           flight_namber<br>
-           flight _ from<br>
-           flight_to<br>
-           takeoff_date<br>
-           arrival_date<br>
-           takeoff_time<br>
-           arrival_time<br>
-           number_of_seats<br>
-           price<br>
-           seats_booked<br>
+           &emsp;flight _ number<br>
+           &emsp;flight_namber<br>
+           &emsp;flight _ from<br>
+           &emsp;flight_to<br>
+           &emsp;takeoff_date<br>
+           &emsp;arrival_date<br>
+           &emsp;takeoff_time<br>
+           &emsp;arrival_time<br>
+           &emsp;number_of_seats<br>
+           &emsp;price<br>
+           &emsp;seats_booked<br>
 
 Flight_Book table has columns as
-           User - user object from User table<br>
-           Flight - flight object from Flight table<br>
+           &emsp;User - user object from User table<br>
+           &emsp;Flight - flight object from Flight table<br>
            
