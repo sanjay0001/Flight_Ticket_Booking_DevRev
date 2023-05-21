@@ -38,6 +38,7 @@ There are totally 3 tables User, Flights and Flight_Book<br>
            &emsp;&emsp;password<br>
            &emsp;&emsp;token - for **authentication** by setting **cache** in client browser<br>
            &emsp;&emsp;is verified - for email verification status<br>
+           
 Flights table has columns as<br>
            &emsp;&emsp;flight _ number<br>
            &emsp;&emsp;flight_namber<br>
