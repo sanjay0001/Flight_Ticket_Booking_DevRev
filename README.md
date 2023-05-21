@@ -1,7 +1,7 @@
-# Flight_Ticket_Booking_DevRev
+# Flight_Ticket_Booking_DevRev 
 
 ### It is the end to end fullstack project developed from scratch for DevRev Assignment
-
+### webapp link : http://sanjay212.pythonanywhere.com/
 ### Tech Stack:
 Backend : Python Django Framework <br>
 Frontend : Bootstrap <br>
@@ -51,7 +51,7 @@ Flights table has columns as<br>
            &emsp;&emsp;price<br>
           &emsp; &emsp;seats_booked<br>
 
-Flight_Book table has columns as
-          &emsp; &emsp;User - user object from User table<br>
-           &emsp;&emsp;Flight - flight object from Flight table<br>
+Flight_Book table has columns as<br>
+          &emsp;&emsp; &emsp;User - user object from User table<br>
+           &emsp;&emsp;&emsp;Flight - flight object from Flight table<br>
            
