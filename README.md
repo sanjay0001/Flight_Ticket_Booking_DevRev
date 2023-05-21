@@ -55,4 +55,10 @@ Flights table has columns as<br>
 Flight_Book table has columns as<br>
           &emsp;&emsp; &emsp;User - user object from User table<br>
            &emsp;&emsp;&emsp;Flight - flight object from Flight table<br>
-           
+        
+## Video Demo
+
+
+
+https://github.com/sanjay0001/Flight_Ticket_Booking_DevRev/assets/75019244/0f80d3ec-79c2-4a18-b2dd-755eb9806bca
+
