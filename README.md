@@ -29,15 +29,15 @@ This application contains two modules <br>
 #### Database design:
 Django uses ORM(Object Relational Mapping) so all the models(objects) are created in Django itself.<br>
 There are totally 3 tables User, Flights and Flight_Book<br>
-User table has columns as <br>
-           &emsp;id<br>
-           &emsp;name<br>
-           &emsp;age<br>
-           &emsp;contactno<br>
-           &emsp;email<br>
-           &emsp;password<br>
-           &emsp;token - for **authentication** by setting **cache** in client browser<br>
-           &emsp;is verified - for email verification status<br>
+**User table has columns as** <br>
+           &emsp;&emsp;**id**<br>
+           &emsp;&emsp;**name**<br>
+           &emsp;&emsp;**age**<br>
+           &emsp;&emsp;contactno<br>
+           &emsp;&emsp;email<br>
+           &emsp;&emsp;password<br>
+           &emsp;&emsp;token - for **authentication** by setting **cache** in client browser<br>
+           &emsp;&emsp;is verified - for email verification status<br>
 Flights table has columns as<br>
            &emsp;flight _ number<br>
            &emsp;flight_namber<br>
