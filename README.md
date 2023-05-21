@@ -58,7 +58,6 @@ Flight_Book table has columns as<br>
         
 ## Video Demo
 
+https://github.com/sanjay0001/Flight_Ticket_Booking_DevRev/assets/75019244/da820d9c-3880-4ad4-9962-d797e3608df3
 
-
-https://github.com/sanjay0001/Flight_Ticket_Booking_DevRev/assets/75019244/0f80d3ec-79c2-4a18-b2dd-755eb9806bca
 
