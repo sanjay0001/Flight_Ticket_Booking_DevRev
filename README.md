@@ -8,10 +8,10 @@ Frontend : Bootstrap <br>
 Database : Sqlite3 <br>
 
 ### About the project:
-It is an online flight ticket booking web application. 
-This application contains two modules 
-            * User
-            * Admin
+It is an online flight ticket booking web application. <br>
+This application contains two modules <br>
+            * User<br>
+            * Admin<br>
             
 #### User modules:
   * **Register** - User can register by giving all the neccessary details and need to verify ##### Email before login.
@@ -27,31 +27,31 @@ This application contains two modules
   * **View Flights details** - Admin can view who are all the people booked tickets in   the selected flight.
  
 #### Database design:
-Django uses ORM(Object Relational Mapping) so all the models(objects) are created in Django itself.
-There are totally 3 tables User, Flights and Flight_Book
-User table has columns as 
-           id
-           name
-           age
-           contactno
-           email
-           password
-           token - for **authentication** by setting **cache** in client browser
-           is verified - for email verification status
-Flights table has columns as
-           flight _ number
-           flight_namber
-           flight _ from
-           flight_to
-           takeoff_date
-           arrival_date
-           takeoff_time
-           arrival_time
-           number_of_seats
-           price
-           seats_booked
+Django uses ORM(Object Relational Mapping) so all the models(objects) are created in Django itself.<br>
+There are totally 3 tables User, Flights and Flight_Book<br>
+User table has columns as <br>
+           id<br>
+           name<br>
+           age<br>
+           contactno<br>
+           email<br>
+           password<br>
+           token - for **authentication** by setting **cache** in client browser<br>
+           is verified - for email verification status<br>
+Flights table has columns as<br>
+           flight _ number<br>
+           flight_namber<br>
+           flight _ from<br>
+           flight_to<br>
+           takeoff_date<br>
+           arrival_date<br>
+           takeoff_time<br>
+           arrival_time<br>
+           number_of_seats<br>
+           price<br>
+           seats_booked<br>
 
 Flight_Book table has columns as
-           User - user object from User table
-           Flight - flight object from Flight table
+           User - user object from User table<br>
+           Flight - flight object from Flight table<br>
            
