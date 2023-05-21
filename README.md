@@ -3,9 +3,9 @@
 ### It is the end to end fullstack project developed from scratch for DevRev Assignment
 
 ### Tech Stack:
-Backend : Python Django Framework
-Frontend : Bootstrap
-Database : Sqlite3
+Backend : Python Django Framework <br>
+Frontend : Bootstrap <br>
+Database : Sqlite3 <br>
 
 ### About the project:
 It is an online flight ticket booking web application. 
