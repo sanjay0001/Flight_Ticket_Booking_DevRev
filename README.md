@@ -14,14 +14,14 @@ This application contains two modules <br>
             &emsp;* Admin<br>
             
 #### User modules:
-  * **Register** - User can register by giving all the neccessary details and need to verify ##### Email before login.
+  * **Register** - User can register by giving all the neccessary details and need to **verify Email** before login.
   * **Login** - After successfully verified email, user can login into the profile page by giving email and password.
   * **Profile** - Profile page shows all the tickets booked by the user.
   * **Buy Tickets** - User can buy tickets on Buy tickets by and also apply filters to find flights.
   * **Search Flight** - User can search flights based on date and time.
 
 #### Admin modules:
-  * **Login** - Admin can login to the admin profile page by giving credentials( username : **admin** , password : **admin** ) in admin login page.
+  * **Login** - Admin can login to the admin profile page by giving credentials( **username** : **admin** , **password** : **admin** ) in admin login page.
   * **Add Flights** - Admin can flights by giving fllight details.
   * **Remove Flights** - Admin can cancel flight.
   * **View Flights details** - Admin can view who are all the people booked tickets in   the selected flight.
