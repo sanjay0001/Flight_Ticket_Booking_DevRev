@@ -31,7 +31,7 @@
     <div class="container rounded bg-white mt-5" >
       {% if flights %}
       <h2 style="text-align:center">My Booking</h2>
-      {% else %}  <h2 style="text-align:center">Sorry! You have no tickets</h2> {% endif %}
+      {% else %}  <h2 style="text-align:center">Hello {{name}}! Wanna fly then buy tickets</h2> {% endif %}
       {% for flight in flights %}
         <div class="card" >
           <div class="card-body">
@@ -45,8 +45,20 @@
               <li class="list-group-item">Departure Time : {{ flight.takeoff_time }} </li>
               <li class="list-group-item">Arrival Date : {{ flight.arrival_date }} </li>
               <li class="list-group-item">Arrival Time :  {{ flight.arrival_time }} </li>
-              <li class="list-group-item">Flight Duration : {{ flight.flight_duration }} hrs</li>
-              <li class="list-group-item">Ticket Price : Rs.{{ flight.price }}</li>
+              {% for f,s in seats.items %}    
+                {% if f == flight.flight_number %}
+                  <li class="list-group-item">Seats :  {{s}} </li>
+                {% endif %}
+              {% endfor %}
+              {% for f,s in total_amounts.items %}    
+                {% if f == flight.flight_number %}
+                <li class="list-group-item">Total Amount : Rs.{{ s }} </li>
+                {% endif %}
+              {% endfor %}
+              
+              <!-- <li class="list-group-item">Ticket Price for business class : Rs.{{ flight.price_business }}</li>
+              <li class="list-group-item">Ticket Price for economy class : Rs.{{ flight.price_economy }}</li> -->
+
             </ul>
           </div>
         </div>

@@ -41,7 +41,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
     'tickets',
+    
 ]
 
 MIDDLEWARE = [
@@ -121,11 +123,29 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATICFILES_DIRS=[
-        os.path.join(BASE_DIR, "static"),
-    ]
+# STATICFILES_FINDER = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'compressor.finders.CompressorFinder'
+# ]
+# STATICFILES_DIRS=[
+#         os.path.join(BASE_DIR, "static")
+#     ]
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+COMPRESS_ENABLED = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+
+
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'static/') 
+STATICFILES_FINDERS =( 'django.contrib.staticfiles.finders.FileSystemFinder',  'django.contrib.staticfiles.finders.AppDirectoriesFinder',    'compressor.finders.CompressorFinder',
+) 
+COMPRESS_PRECOMPILERS = (    
+    ('text/x-scss', 'django_libsass.SassCompiler'),
+)
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -134,4 +154,4 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = '200701212@rajalakshmi.edu.in'
-EMAIL_HOST_PASSWORD="Put_your_email_password"
+EMAIL_HOST_PASSWORD="REC202088256"

@@ -46,15 +46,20 @@
               <li class="list-group-item">Departure Time : {{ flight.takeoff_time }} </li>
               <li class="list-group-item">Arrival Date : {{ flight.arrival_date }} </li>
               <li class="list-group-item">Arrival Time :  {{ flight.arrival_time }} </li>
-              <li class="list-group-item">Flight Duration : {{ flight.flight_duration }} hrs</li>
-              <li class="list-group-item">Ticket Price : Rs.{{ flight.price }}</li>
+              <li class="list-group-item">No. of available seats :  {{ flight.available_seats }} </li>
+              <!-- <li class="list-group-item">Remaining no. of Seats :  {{ r_booked }} </li> -->
               <li class="list-group-item">
                 <h6>Booked List:</h6>
                 <ul>
-                  {% for booking in flight.flight_book_set.all %}
+                  <!-- {% for booking in flight.flight_book_set.all %}
                       <li>{{ booking.user.name }} - {{ booking.user.email }}</li>
                   {% empty %}
                       <li>No bookings for this flight</li>
+                  {% endfor %} -->
+                  {% for k,v in passengers.items %}
+                    {% if k == flight.flight_number %}
+                      <li>{{ v }}</li>
+                    {% endif %}
                   {% endfor %}
                 </ul>
               </li>  

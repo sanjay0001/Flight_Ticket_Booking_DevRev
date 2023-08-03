@@ -9,6 +9,9 @@ class UserAdmin(admin.ModelAdmin):
 @admin.register(Flight)
 class FlightAdmin(admin.ModelAdmin):
     search_fields=["flight_number", "flight_name"]
-    list_display = ['flight_number','flight_name']
+    list_display = ['flight_number','flight_name','active']
 
-admin.site.register(Flight_Book)
+@admin.register(Booking)
+class FlightAdmin(admin.ModelAdmin):
+    search_fields=["flight", "seat_number"]
+    list_display = ['flight','seat_number',"seat_status","seat_class","seat_price","passenger_name","user"]

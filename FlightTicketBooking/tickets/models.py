@@ -29,18 +29,29 @@ class Flight(models.Model):
     arrival_date = models.DateField()
     takeoff_time = models.TimeField()
     arrival_time = models.TimeField()
-    flight_duration = models.FloatField()
-    number_of_seats = models.IntegerField()
-    price = models.IntegerField()
-    seats_booked = models.IntegerField()
-
+    available_seats = models.IntegerField(default=60)
+    price_business = models.FloatField(default=0.00)
+    price_economy = models.FloatField(default=0.00)
+    active=models.BooleanField(default=True)
+    
     def __str__(self):
       return self.flight_number
     
-class Flight_Book(models.Model):
-   user = models.ForeignKey(User, on_delete=models.CASCADE)
-   flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+# class Flight_Book(models.Model):
+#    user = models.ForeignKey(User, on_delete=models.CASCADE)
+#    flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
 
-   def __str__(self):
-      return f"{str(self.flight)}, {str(self.user)}"
-   
+#    def __str__(self):
+#       return f"{str(self.flight)}, {str(self.user)}"
+  
+
+class Booking(models.Model):
+  flight = models.ForeignKey(Flight, on_delete=models.CASCADE)
+  seat_number = models.CharField(max_length=10,default="")
+  seat_status = models.CharField(max_length=15,default="")
+  seat_class=models.CharField(max_length=20,default="business")
+  seat_price=models.FloatField(default=0.00)
+  passenger_name=models.CharField(default="",max_length=50)
+  user=models.ForeignKey(User,on_delete=models.CASCADE)
+  def __str__(self):
+      return f"{str(self.flight)}, {str(self.seat_number)}"
